@@ -1,0 +1,9 @@
+project: savantenvs/netcdf-c
+target: fuzz_open
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_open/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_open
+    libfuzzer: true
+    timeout: 5
